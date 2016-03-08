@@ -1,0 +1,64 @@
+••• Front End •••
+
+BREADCRUMBS
+ Home>Categories>Food>Packaged Foods>Drinks>Functional Beverages>Energy Drinks>Steaz Berry
+
+GENERAL TEMPLATE
+  1) Nav
+    a) Personal
+    b) Food
+    c) Household
+    d) Babies? / Kids
+
+  2) Header
+    a) Prominent Search
+    b) Educational Piece
+    c) Blog Component (img? hyperlink to blog)
+
+  3)Footer
+    a) Pertinent Links
+      • Social
+      • Blog
+      • Mission/Vision
+      • Financial Reports
+      • Coolest 404 Eva
+    b) Obligatory Links
+      • legal
+      • contact us
+      • press
+      • Site Index
+    c) Micro-Content?  Twitter feed?
+
+HOME PAGE
+  Article class="popular-products"
+    • Popular (Featured) Product Grid
+  Blog teaser
+
+SUPERCATEGORY PAGE
+  just drop-downs (Sweet, Savory, Vegan, Gluten Free...)
+
+CATEGORY PAGE
+  • Another big search bar
+  • Featured / Eye-candy (a review or...?)
+  • Grid of Products
+  • Sidebar of sub-categories/filters (Fair Trade Organic, dairy-free, vegan, kosher, halal, etc).
+
+PRODUCT PAGE
+  1) Image
+  2) Title
+    a) Brand / Product Name
+  3) Rating
+    a) Health
+    b) Enviro
+    c) Community
+  4) Ingredients
+    a) Sorted in order of quantity
+    b) Nutrition?
+  5) Company Rating
+    a) Score - hidden secondary scores
+  6) Certification Badges
+    a) Img
+    b) Name
+  7) Suggested/Related Items
+    a) Top 3 items of category
+      *** Higher Quality / More Affordable
