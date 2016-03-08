@@ -1,0 +1,38 @@
+
+<nav class="navbar">
+  {{!-- {{#each categories as |cat|}}
+    {{log cat}}
+    <li {{action showCat(cat)}}>{{cat.name}}</li>
+  {{/each}} --}}
+
+  <p class="navbar-item is-text-centered">
+    <a class="link is-info" href="#">Home</a>
+  </p>
+  <p class="navbar-item is-text-centered">
+    <a class="link is-info" href="#">Foods</a>
+  </p>
+  <p class="navbar-item is-text-centered">
+    SHOPTIVIST
+  </p>
+  <p class="navbar-item is-text-centered">
+    <a class="link is-info" href="#">Household</a>
+  </p>
+  <p class="navbar-item is-text-centered">
+    <a class="link is-info" href="#">Childrens</a>
+  </p>
+</nav>
+
+
+
+
+
+{{!-- TODO: Do we even WANT crumbs?
+        TEST crumbs
+        STYLE crumbs (app/templates/components/bread-crumbs.hbs)
+        https://github.com/chrisfarber/ember-breadcrumbs
+--}}
+{{!-- <div class="crumbs">
+    BREADCRUMBS: {{bread-crumbs}}
+</div> --}}
+
+{{yield}}
