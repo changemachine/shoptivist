@@ -1,0 +1,14 @@
+<h2>Admin Parent Company</h2>
+
+{{#if parent_companies}}
+  {{#each parent_companies as |parent_company|}}
+    <div class="row well">
+      <div class="col-md-12">
+        <li>{{parent_company-tile parent_company=parent_company deleteParentCompany='deleteParentCompany'}}</li>
+      </div>
+    </div>
+  {{/each}}
+{{else}}
+  <h2>Let's add some Parent companies!</h2>
+{{/if}}
+{{new-parent-company saveParentCompany='saveParentCompany'}}
