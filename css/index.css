@@ -1,0 +1,108 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+.container {
+  width: 1200px;
+  margin: 0 auto; }
+
+.nav {
+  width: 100vw;
+  height: 5rem;
+  background-color: lightblue; }
+  .nav .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white; }
+
+.nav-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 30rem; }
+  .nav-main a {
+    color: white;
+    text-decoration: none; }
+
+.logo {
+  display: flex;
+  align-items: center;
+  width: 200px;
+  height: 80px; }
+
+.search-prim {
+  display: flex; }
+  .search-prim input {
+    flex: 1 1 70%;
+    padding: 0.3rem; }
+  .search-prim .button {
+    border: none;
+    flex: 1 1 30%;
+    padding: 0.3rem;
+    background-color: #34E8C4;
+    color: white; }
+
+.header {
+  width: 90vw;
+  height: 30vh;
+  background-image: url("../img/bg-2-orange.jpeg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: flex-end; }
+
+.search-home {
+  display: flex;
+  width: 70%;
+  height: 45px;
+  margin: 35px auto 35px auto; }
+  .search-home input {
+    flex: 1 1 80%;
+    padding: 0.3rem;
+    border: none;
+    border-radius: 4px 0 0 4px; }
+  .search-home .button {
+    border: none;
+    flex: 1 1 20%;
+    padding: 0.3rem;
+    background-color: #34E8C4;
+    color: white;
+    border-radius: 0 4px 4px 0; }
+
+.section-home {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid chartreuse; }
+
+.educate {
+  display: flex;
+  width: 60vw;
+  border: 1px solid chartreuse;
+  flex-wrap: wrap; }
+
+#row1, #row2 {
+  width: 60vw; }
+
+.gradient {
+  display: flex;
+  justify-content: space-between;
+  width: 100%; }
+  .gradient span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1; }
+    .gradient span:first-of-type {
+      background-color: magenta; }
+    .gradient span:last-of-type {
+      background-color: cyan; }
+    .gradient span:nth-child(2) {
+      background: linear-gradient(90deg, magenta, cyan); }
+
+.blog-link {
+  width: 40vw;
+  height: 30rem;
+  border: 1px solid chartreuse; }
+
+/*# sourceMappingURL=index.css.map */

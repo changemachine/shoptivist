@@ -1,0 +1,45 @@
+.nav {
+  width: 100vw;
+  height: 5rem;
+  background-color: lightblue;
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    color: white;
+  }
+  // border: 1px solid green;
+}
+.nav-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 30rem;
+  a {
+    color: white;
+    text-decoration: none;
+  }
+  // border: 1px solid red;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  width: 200px;
+  height: 80px;
+}
+
+.search-prim {
+  display: flex;
+  input {
+    flex: 1 1 70%;
+    padding: 0.3rem;
+  };
+  .button {
+    border: none;
+    flex: 1 1 30%;
+    padding: 0.3rem;
+    background-color: $color-seafoam;
+    color: white;
+  }
+}

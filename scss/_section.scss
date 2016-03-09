@@ -1,0 +1,41 @@
+.section-home {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid chartreuse;
+}
+.educate {
+  display: flex;
+  width: 60vw;
+  border: 1px solid chartreuse;
+  flex-wrap: wrap;
+}
+#row1, #row2 {
+  width: 60vw;
+}
+.gradient {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    // flex: 1 1 33.333333%;
+
+    &:first-of-type {
+      background-color: magenta;
+    }
+    &:last-of-type {
+      background-color: cyan;
+    }
+    &:nth-child(2) {
+      background: linear-gradient(90deg, magenta, cyan);
+    }
+  }
+}
+.blog-link {
+  width: 40vw;
+  height: 30rem;
+  border: 1px solid chartreuse;
+}
