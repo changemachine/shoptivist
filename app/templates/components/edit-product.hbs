@@ -1,0 +1,19 @@
+<h2>Edit Product {{product.product_name}}</h2>
+
+{{#if product.ingredients}}
+<h2>Ingredients</h2>
+  {{#each product.ingredients as |ingredient|}}
+    <div class="row well">
+      <div class="col-md-12">
+        <li>
+          {{ingredient.ingredient}}
+          {{ingredient.quantity}}
+          {{ingredient.type}}
+        </li>
+      </div>
+    </div>
+  {{/each}}
+{{else}}
+  <h2>Let's add some Ingredients!</h2>
+{{/if}}
+{{new-ingredient product=product saveIngredient="saveIngredient"}}
