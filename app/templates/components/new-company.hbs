@@ -1,0 +1,37 @@
+{{#if addNewCompany}}
+<h1>Add Company</h1>
+  <div>
+    <form>
+      <div class="form-group">
+        <label for="name">Name</label>
+        {{input value=name id="name"}}
+      </div>
+
+      <div class="form-group">
+        <label for="health_score">Health Score</label>
+        {{input value=health_score id="health_score"}}
+      </div>
+
+      <div class="form-group">
+        <label for="environment_score">Environment Score</label>
+        {{input value=environment_score id="environment_score"}}
+      </div>
+
+      <div class="form-group">
+        <label for="social_score">Social Score</label>
+        {{input value=social_score id="social_score"}}
+      </div>
+
+      <label for="parent_company">Parent Company (optional)</label>
+      <select dropdown class="dropdown" name="color">
+        {{#each companies as |parent_company|}}
+            <option value="{{parent_company.id}}">{{parent_company.name}}</option>
+        {{/each}}
+      </select>
+
+      <br><button {{action 'saveCompany'}}>Save</button>
+    </form>
+  </div>
+ {{else}}
+    <button class="btn btn-success"{{action 'companyFormShow'}}>New Company</button>
+{{/if}}

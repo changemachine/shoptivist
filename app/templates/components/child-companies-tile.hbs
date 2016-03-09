@@ -1,0 +1,15 @@
+<h2>Admin Child Companies</h2>
+
+{{#if parent_company.companies}}
+  {{#each parent_company.companies as |child_company|}}
+    <div class="row well">
+      <div class="col-md-12">
+        <!-- <li>{{parent_company-tile child_company=child_company deleteChildCompany='deleteChildCompany'}}</li> -->
+        <li>{{parent_company-tile child_company=child_company deleteChildCompany='deleteChildCompany'}}</li>
+      </div>
+    </div>
+  {{/each}}
+{{else}}
+  <h2>Let's add some companies to the parent company {{parent_company.name}}!</h2>
+{{/if}}
+{{new-child-company saveChildCompany='saveChildCompany'}}

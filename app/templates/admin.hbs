@@ -1,1 +1,15 @@
-{{#link-to 'parent-companies'}}Parent Companies{{/link-to}}
+<h1>Admin</h1>
+
+<h2>Companies</h2>
+{{#if model}}
+  {{#each model as |company|}}
+    <div class="row well">
+      <div class="col-md-12">
+        <li>{{company-tile company=company deleteCompany="deleteCompany"}}</li>
+      </div>
+    </div>
+  {{/each}}
+{{else}}
+  <h2>Let's add some Companies!</h2>
+{{/if}}
+{{new-company saveCompany='saveCompany' companies=model}}
