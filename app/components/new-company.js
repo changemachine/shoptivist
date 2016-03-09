@@ -2,6 +2,8 @@ import Ember from 'ember';
 
 export default Ember.Component.extend({
   addNewCompany: false,
+  parentCo: '',
+
   actions: {
     companyFormShow() {
       this.set('addNewCompany', true);
@@ -18,7 +20,7 @@ export default Ember.Component.extend({
         health_score: this.get('health_score'),
         environment_score: this.get('environment_score'),
         social_score: this.get('social_score'),
-        parent_company: this.get('parent_company.id') || null
+        parent_company: this.get('parentCo') || ""
       };
       this.set('addNewCompany', false);
       this.sendAction('saveCompany', params);

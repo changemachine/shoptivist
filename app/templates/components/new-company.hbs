@@ -22,12 +22,16 @@
         {{input value=social_score id="social_score"}}
       </div>
 
-      <label for="parent_company">Parent Company (optional)</label>
-      <select dropdown class="dropdown" name="color">
-        {{#each companies as |parent_company|}}
-            <option value="{{parent_company.id}}">{{parent_company.name}}</option>
-        {{/each}}
-      </select>
+
+      {{!-- <label for="parent_co">Parent Company (optional)</label> --}}
+
+      {{#power-select
+        options=companies
+        selected=company.name
+        searchField="name"
+        onchange=(action (mut parentCo) value="name") as |company|}}
+        {{company.name}}
+      {{/power-select}}
 
       <br><button {{action 'saveCompany'}}>Save</button>
     </form>

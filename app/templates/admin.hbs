@@ -1,6 +1,7 @@
 <h1>Admin</h1>
 
 <h2>Companies</h2>
+
 {{#if model}}
   {{#each model as |company|}}
     <div class="row well">
@@ -9,7 +10,9 @@
       </div>
     </div>
   {{/each}}
+
 {{else}}
   <h2>Let's add some Companies!</h2>
 {{/if}}
+
 {{new-company saveCompany='saveCompany' companies=model}}

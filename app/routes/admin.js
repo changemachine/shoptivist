@@ -7,6 +7,7 @@ export default Ember.Route.extend({
 
   actions: {
     saveCompany(params) {
+      console.log(params);
       var newCompany = this.store.createRecord('company', params);
       newCompany.save();
       this.transitionTo('admin');
