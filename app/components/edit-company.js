@@ -11,6 +11,10 @@ export default Ember.Component.extend({
         social: this.get('company.parent_company'),
       };
       this.sendAction('updateCompany', company, params);
+    },
+
+    saveProduct(company, params) {
+      this.sendAction('saveProduct', company, params);
     }
   }
 });

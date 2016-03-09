@@ -14,6 +14,15 @@ export default Ember.Route.extend({
       });
       company.save();
       this.transitionTo('admin');
+    },
+
+    saveProduct(company, params) {
+      var newProduct = this.store.createRecord('product', params);
+      company.get('products').addObject(newProduct);
+      newProduct.save().then(function() {
+        return company.save();
+      });
+      this.transitionTo('company', company);
     }
   }
 });
