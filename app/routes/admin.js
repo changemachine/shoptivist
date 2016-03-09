@@ -19,7 +19,7 @@ export default Ember.Route.extend({
       this.transitionTo('admin');
     },
     saveCategory(params) {
-      console.log('are we here')
+      console.log('are we here');
       var newCategory = this.store.createRecord('category', params);
       newCategory.save();
       this.transitionTo('admin');
