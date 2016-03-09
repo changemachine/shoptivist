@@ -1,3 +1,10 @@
 // VARIABLES !
   //color
-    $color-seafoam: #34E8C4
+    $color-seafoam: #34E8C4;
+
+// EXTENDS !
+  %input-reset {
+    &:focus{
+      outline: none;
+    }
+  }
