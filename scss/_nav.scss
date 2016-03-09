@@ -1,13 +1,16 @@
 .nav {
+  position: absolute;
   width: 100vw;
   height: 5rem;
-  background-color: lightblue;
+  // background-color: lightblue;
+  display: flex;
+  align-items: center;
   .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-
     color: white;
+
   }
   // border: 1px solid green;
 }
@@ -19,18 +22,23 @@
   a {
     color: white;
     text-decoration: none;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   }
-  // border: 1px solid red;
+
 }
 .logo {
   display: flex;
   align-items: center;
-  width: 200px;
-  height: 80px;
+  font-size: 1.5rem;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  // width: 200px;
+  // height: 80px;
+  // border: 1px solid red;
 }
 
 .search-prim {
   display: flex;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   input {
     flex: 1 1 70%;
     padding: 0.3rem;

@@ -6,13 +6,11 @@
 .educate {
   display: flex;
   width: 60vw;
-  border: 1px solid chartreuse;
+  // border: 1px solid chartreuse;
   flex-wrap: wrap;
 }
-#row1, #row2 {
-  width: 60vw;
-}
-.gradient {
+
+#row1 {
   display: flex;
   justify-content: space-between;
   width: 100%;
@@ -20,22 +18,38 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-grow: 1;
-    // flex: 1 1 33.333333%;
-
     &:first-of-type {
       background-color: magenta;
+      flex: 1 1 25%;
     }
     &:last-of-type {
       background-color: cyan;
+      flex: 1 1 25%;
     }
     &:nth-child(2) {
+      // border: 1px solid chartreuse;
       background: linear-gradient(90deg, magenta, cyan);
+      flex: 1 1 50%;
     }
   }
 }
+#row2 {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1 1 25%;
+    border: 1px solid chartreuse;
+  }
+}
+
 .blog-link {
   width: 40vw;
   height: 30rem;
-  border: 1px solid chartreuse;
+  margin: 0 0 0 1rem;
+  background-color: lightgreen;
+  // border: 1px solid chartreuse;
 }
