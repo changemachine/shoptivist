@@ -1,0 +1,133 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0; }
+
+.container {
+  width: 70vw;
+  margin: 0 auto; }
+
+body {
+  font-family: 'Rubik', sans-serif;
+  background-color: #fff7df; }
+
+.nav {
+  position: absolute;
+  width: 100vw;
+  height: 5rem;
+  display: flex;
+  align-items: center; }
+  .nav .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white; }
+
+.nav-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 30rem; }
+  .nav-main a {
+    color: white;
+    text-decoration: none;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.2); }
+
+.logo {
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.2); }
+
+.search-prim {
+  display: flex;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); }
+  .search-prim input {
+    flex: 1 1 70%;
+    padding: 0.3rem; }
+  .search-prim .button {
+    border: none;
+    flex: 1 1 30%;
+    padding: 0.3rem;
+    background-color: #34E8C4;
+    color: white; }
+
+.header {
+  width: 100vw;
+  height: 50vh;
+  background-image: url("../img/food-healthy-morning-cereals.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: flex-end;
+  margin: 0 auto 1rem auto; }
+
+.search-home {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  width: 70%;
+  height: 50px;
+  margin: 35px auto 35px auto; }
+  .search-home input {
+    flex: 1 1 80%;
+    padding: 0 0 0 1rem;
+    border: none;
+    border-radius: 4px 0 0 4px;
+    font-size: 1rem; }
+  .search-home .button {
+    border: none;
+    flex: 1 1 20%;
+    padding: 0.3rem;
+    background-color: #34E8C4;
+    color: white;
+    font-size: 1rem;
+    border-radius: 0 4px 4px 0; }
+
+.section-home {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid chartreuse; }
+
+.educate {
+  display: flex;
+  width: 60vw;
+  flex-wrap: wrap; }
+
+#row1 {
+  display: flex;
+  justify-content: space-between;
+  width: 100%; }
+  #row1 span {
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    #row1 span:first-of-type {
+      background-color: magenta;
+      flex: 1 1 25%; }
+    #row1 span:last-of-type {
+      background-color: cyan;
+      flex: 1 1 25%; }
+    #row1 span:nth-child(2) {
+      background: linear-gradient(90deg, magenta, cyan);
+      flex: 1 1 50%; }
+
+#row2 {
+  display: flex;
+  justify-content: space-between;
+  width: 100%; }
+  #row2 div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1 1 25%;
+    border: 1px solid chartreuse; }
+
+.blog-link {
+  width: 40vw;
+  height: 30rem;
+  margin: 0 0 0 1rem;
+  background-color: lightgreen; }
+
+/*# sourceMappingURL=style.css.map */

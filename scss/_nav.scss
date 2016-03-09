@@ -1,0 +1,53 @@
+.nav {
+  position: absolute;
+  width: 100vw;
+  height: 5rem;
+  // background-color: lightblue;
+  display: flex;
+  align-items: center;
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+
+  }
+  // border: 1px solid green;
+}
+.nav-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 30rem;
+  a {
+    color: white;
+    text-decoration: none;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+
+}
+.logo {
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  // width: 200px;
+  // height: 80px;
+  // border: 1px solid red;
+}
+
+.search-prim {
+  display: flex;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  input {
+    flex: 1 1 70%;
+    padding: 0.3rem;
+  };
+  .button {
+    border: none;
+    flex: 1 1 30%;
+    padding: 0.3rem;
+    background-color: $color-seafoam;
+    color: white;
+  }
+}
