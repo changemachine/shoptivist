@@ -7,11 +7,23 @@
 }
 
 .container {
-  width: 70vw;;
+  width: 1200px;;
   margin: 0 auto;
 }
 
 body {
   font-family: 'Rubik', sans-serif;
-  background-color: #fff7df;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+ul, li {
+  list-style: none;
+}
+
+a {
+  &:hover {
+    cursor: pointer;
+  }
 }
