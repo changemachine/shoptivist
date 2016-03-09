@@ -1,6 +1,8 @@
+<hr>
 <h1>Admin</h1>
-
-<h2>Companies</h2>
+<hr>
+<h3>Companies</h3>
+<hr>
 
 {{#if model.companies}}
   {{#each model.companies as |company|}}
@@ -15,7 +17,9 @@
   <h2>Let's add some Companies!</h2>
 {{/if}}
 {{new-company saveCompany='saveCompany' companies=model.companies}}
+
 <hr>
+
 {{#if model.categories}}
   {{#each model.categories as |category|}}
     <div class="row well">
@@ -28,4 +32,5 @@
 {{else}}
   <h2>Let's add some Categories!</h2>
 {{/if}}
+
 {{new-category saveCategory='saveCategory'}}

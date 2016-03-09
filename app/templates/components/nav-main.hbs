@@ -1,26 +1,29 @@
+<nav class="nav">
+  <div class="container">
+    <div class="logo">
+      <h1>Shoptivist</h1>
+    </div>
 
-<nav class="navbar">
+    <div class="nav-main">
+      <p class=""><a href="#">Personal</a></p>
+      <p class=""><a href="#">Food</a></p>
+      <p class=""><a href="#">Household</a></p>
+      <p class=""><a href="#">Babies / Kids</a></p>
+      <p class="">{{#link-to 'admin'}}<small>Admin</small>{{/link-to}}</p>
+    </div>
+
+    <div class="search-prim">
+      <input type="text" name="name" value="">
+      <button class="button">Click me</button>
+    </div>
+  </div>
+</nav>
+
+
   {{!-- {{#each categories as |cat|}}
     {{log cat}}
     <li {{action showCat(cat)}}>{{cat.name}}</li>
   {{/each}} --}}
-
-  <p class="navbar-item is-text-centered">
-    <a class="link is-info" href="#">Home</a>
-  </p>
-  <p class="navbar-item is-text-centered">
-    <a class="link is-info" href="#">Foods</a>
-  </p>
-  <p class="navbar-item is-text-centered">
-    SHOPTIVIST
-  </p>
-  <p class="navbar-item is-text-centered">
-    <a class="link is-info" href="#">Household</a>
-  </p>
-  <p class="navbar-item is-text-centered">
-    <a class="link is-info" href="#">Childrens</a>
-  </p>
-</nav>
 
 
 

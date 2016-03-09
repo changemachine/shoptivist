@@ -1,10 +1,13 @@
-{{!-- WHAT's in a header? --}}
-
-<header>
-  {{#if fatSearch}}
-    {{input class="fatSearch" placeholder="BIG FAT SEARCH AREA"}}
-  {{/if}}
-
+{{!-- Check yr header. --}}
+<header class="header container">
+  <div class="search-home">
+    <input class="input" placeholder="Search" type="text" name="name" value="">
+      <button class="button"><i class="fa fa-search"></i> Search</button>
+  </div>
+  {{!-- {{#if fatSearch}}
+  {{input class="fatSearch" placeholder="BIG FAT SEARCH AREA"}}
+  {{/if}} --}}
 </header>
+
 
 {{yield}}
