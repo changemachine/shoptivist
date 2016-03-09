@@ -2,8 +2,8 @@
 
 <h2>Companies</h2>
 
-{{#if model}}
-  {{#each model as |company|}}
+{{#if model.companies}}
+  {{#each model.companies as |company|}}
     <div class="row well">
       <div class="col-md-12">
         <li>{{company-tile company=company deleteCompany="deleteCompany"}}</li>
@@ -14,5 +14,18 @@
 {{else}}
   <h2>Let's add some Companies!</h2>
 {{/if}}
+{{new-company saveCompany='saveCompany' companies=model.companies}}
+<hr>
+{{#if model.categories}}
+  {{#each model.categories as |category|}}
+    <div class="row well">
+      <div class="col-md-12">
+        <li>{{category-tile category=category}}</li>
+      </div>
+    </div>
+  {{/each}}
 
-{{new-company saveCompany='saveCompany' companies=model}}
+{{else}}
+  <h2>Let's add some Categories!</h2>
+{{/if}}
+{{new-category saveCategory='saveCategory'}}
