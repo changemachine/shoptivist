@@ -8,6 +8,7 @@ const Router = Ember.Router.extend({
 Router.map(function() {
   this.route('admin');
   this.route('company', {path: 'company/:company_id'});
+  this.route('subcat');
 });
 
 export default Router;

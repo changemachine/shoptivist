@@ -1,0 +1,42 @@
+{{yield}}
+
+<h2>Admin - SubCategories</h2>
+
+  {{#each sub_categories as |subcat|}}
+    <div class="row well">
+
+        <li>{{subcat-tile subcat=subcat deleteSubcat='deleteSubcat' deleteProduct='deleteProduct'}}</li>
+
+    </div>
+  {{/each}}
+
+{{#if admin}}
+
+    {{#if showSubcatForm}}
+      <h4>Add a NEW Subcategory!</h4>
+
+      <form class="newSubcat" action="index.html" method="post">
+        {{input value=value id="newSubcat" name="newSubcat" placeholder="newSubcat"}}
+        <button {{action "newSubcat"}} type="submit" name="button">Submit</button>
+      </form>
+
+    {{else}}
+      <button {{action 'toggleNewSubcat'}} type="button" name="button">Add New Subcategory</button>
+    {{/if}}
+
+{{/if}}
+
+
+
+
+{{!-- FOR CATEGORIES ROUTE:  "Add new Sub-cat!"
+
+actions:{
+  deleteSubCat(subcat){
+    this.sendAction('deleteSubCat', subcat);
+  },
+  saveSubCat(subcatData) {
+    this.sendAction('saveSubCat', subcatData);
+  }
+}
+ --}}
