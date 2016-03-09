@@ -1,0 +1,25 @@
+{{#if addNewIngredient}}
+<h1>Add Ingredient</h1>
+  <div>
+    <form>
+      <div class="form-group">
+        <label for="name">Ingredient</label>
+        {{input value=ingredient id="ingredient"}}
+      </div>
+
+      <div class="form-group">
+        <label for="quantity">Quantity</label>
+        {{input value=quantity id="quantity"}}
+      </div>
+
+      <div class="form-group">
+        <label for="type">Type</label>
+        {{input value=type id="type"}}
+      </div>
+
+      <button {{action 'saveIngredient' product}}>Save</button>
+    </form>
+  </div>
+ {{else}}
+    <button class="btn btn-success"{{action 'IngredientFormShow'}}>New Ingredient</button>
+{{/if}}

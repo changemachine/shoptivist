@@ -9,6 +9,7 @@ Router.map(function() {
   this.route('admin');
   this.route('company', {path: 'company/:company_id'});
   this.route('subcat');
+  this.route('product', {path: 'product/:product_id'});
 });
 
 export default Router;
