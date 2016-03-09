@@ -1,0 +1,17 @@
+<h2>Edit Category {{category.name}}</h2>
+
+{{#if category.sub_categories}}
+<h2>Sub Categories</h2>
+  {{#each category.sub_categories as |sub_categories|}}
+    <div class="row well">
+      <div class="col-md-12">
+        <li>
+          {{sub_categories.name}}
+        </li>
+      </div>
+    </div>
+  {{/each}}
+{{else}}
+  <h2>Let's add some Sub Categories!</h2>
+{{/if}}
+{{new-subCategory category=category saveSubCategory="saveSubCategory"}}
