@@ -17,31 +17,7 @@
     align-items: center;
     justify-content: space-between;
     width: 30%;
-    span {
-      // border: 1px solid chartreuse;
-      // flex: 1 1 40%;
-      width: 4rem;
-      height: 4rem;
-      color: white;
-      font-size: 2rem;
-      background-color: #72FF8D;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      position: relative;
-      &:before {
-        content:"";
-        position: absolute;
-        right: 26%;
-        bottom: -2.95rem;
-        width: 0;
-        height: 0;
-        border-top: 32px solid transparent;
-        border-right: 30px solid #72FF8D;
-        border-bottom: 32px solid transparent;
-        transform: rotate(-90deg);
-      }
-    }
+    @extend %rating-badge;
     img {
       height: 18rem;
     }
