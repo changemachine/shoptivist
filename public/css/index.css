@@ -33,6 +33,9 @@
 .container {
   width: 1200px;
   margin: 0 auto; }
+  @media screen and (min-width: 768px) and (max-width: 1200px) and (-webkit-min-device-pixel-ratio: 1) {
+    .container {
+      width: 1000px; } }
 
 body {
   font-family: 'Rubik', sans-serif;
@@ -120,7 +123,7 @@ a:hover, button:hover {
 .header {
   width: 100vw;
   height: 48vh;
-  background-image: url("../public/img/food-healthy-morning-cereals.jpg");
+  background-image: url("../img/food-healthy-morning-cereals.jpg");
   background-size: cover;
   background-position: center;
   display: flex;
@@ -216,17 +219,29 @@ a:hover, button:hover {
   margin: 0 0 0 1rem; }
 
 .section-category {
-  flex: 1; }
-  .section-category .product-grid {
+  display: flex;
+  flex: 1;
+  margin: 1rem auto; }
+  .section-category .category-col-left {
     display: flex;
+    flex-direction: column;
     width: 70%; }
   .section-category .category-list {
     display: flex;
     flex-direction: column;
     width: 30%; }
 
+.product-grid {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap; }
+
+h3 {
+  margin: 3rem 0; }
+
 a {
-  width: 25%; }
+  width: calc(32% - 0.5rem);
+  margin: 0.5rem; }
   a .product-tile {
     display: flex;
     flex-direction: column;
@@ -234,14 +249,13 @@ a {
     background-color: #fff7df;
     width: 100%;
     height: 20rem;
-    margin: 1rem;
     padding: 1rem; }
     a .product-tile .product-img {
       display: flex;
       justify-content: center;
       align-content: flex-end;
       width: 95%;
-      height: 12rem;
+      height: 10rem;
       background-color: white;
       margin: 0.5rem auto; }
       a .product-tile .product-img img {
