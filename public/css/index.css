@@ -1,5 +1,27 @@
-.search-prim input:focus, .search-prim .button:focus, .search-home input:focus, .search-home .button:focus {
+.nav .search-nav input:focus, .nav .search-nav .button:focus, .search-home input:focus, .search-home .button:focus {
   outline: none; }
+
+.educate .col1 span, a .product-tile .rating span {
+  width: 4rem;
+  height: 4rem;
+  color: white;
+  font-size: 2rem;
+  background-color: #72FF8D;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative; }
+  .educate .col1 span:before, a .product-tile .rating span:before {
+    content: "";
+    position: absolute;
+    right: 26%;
+    bottom: -2.95rem;
+    width: 0;
+    height: 0;
+    border-top: 32px solid transparent;
+    border-right: 30px solid #72FF8D;
+    border-bottom: 32px solid transparent;
+    transform: rotate(-90deg); }
 
 * {
   -webkit-box-sizing: border-box;
@@ -14,19 +36,22 @@
 
 body {
   font-family: 'Rubik', sans-serif;
+  color: #4d4d4d;
   display: flex;
   min-height: 100vh;
   flex-direction: column; }
 
-ul, li {
-  list-style: none; }
+ul, li, a {
+  list-style: none;
+  text-decoration: none;
+  color: inherit; }
 
-a:hover {
+a:hover, button:hover {
   cursor: pointer; }
 
 .nav {
   width: 100vw;
-  height: 6rem;
+  height: 6vh;
   background-color: #fff7df;
   display: flex;
   align-items: center; }
@@ -35,45 +60,67 @@ a:hover {
     justify-content: space-between;
     align-items: center;
     color: #34E8C4; }
-
-.nav-main {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 40%; }
-  .nav-main a {
-    color: #34E8C4;
-    text-decoration: none; }
-
-.logo {
-  display: flex;
-  align-items: center;
-  font-size: 1.5rem; }
-
-.search-prim {
-  display: flex; }
-  .search-prim input {
-    padding: 0.3rem;
-    border: none;
-    border-bottom: 1px solid #34E8C4;
-    width: 14rem;
-    font-size: 1.2rem;
-    color: #34E8C4;
-    background-color: #fff7df; }
-  .search-prim .button {
-    margin: 0 0 0 0.3rem;
-    border: none;
-    padding: 0.3rem;
-    color: #34E8C4;
-    font-size: 1.2rem;
-    background-color: #fff7df;
-    border-radius: 0 4px 4px 0;
-    width: 2rem; }
+  .nav .search-nav {
+    display: flex; }
+    .nav .search-nav input {
+      padding: 0.3rem;
+      border: none;
+      border-bottom: 1px solid #34E8C4;
+      width: 14rem;
+      font-size: 1.2rem;
+      color: #34E8C4;
+      background-color: #fff7df; }
+    .nav .search-nav .button {
+      margin: 0 0 0 0.3rem;
+      border: none;
+      padding: 0.3rem;
+      color: #34E8C4;
+      font-size: 1.2rem;
+      background-color: #fff7df;
+      border-radius: 0 4px 4px 0;
+      width: 2rem; }
+  .nav .nav-main {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 40%; }
+    .nav .nav-main li {
+      color: #34E8C4;
+      text-decoration: none;
+      padding: 0.8rem 0.8rem; }
+      .nav .nav-main li:last-child:hover {
+        color: #13a386;
+        background-color: #f2ffcc;
+        border-radius: 4px; }
+      .nav .nav-main li:nth-child(n+1):nth-child(-n+4):hover {
+        background-color: #f2ffcc;
+        border-radius: 4px 4px 0 0;
+        color: #13a386; }
+        .nav .nav-main li:nth-child(n+1):nth-child(-n+4):hover .drop-down-menu ul {
+          position: absolute;
+          display: flex;
+          flex-direction: column; }
+    .nav .nav-main .drop-down-menu ul {
+      display: none;
+      background-color: #f2ffcc;
+      margin: 0 0 0 -0.8rem; }
+      .nav .nav-main .drop-down-menu ul li {
+        padding: 0.8rem 1rem 0.8rem 0.8rem;
+        border-bottom: 1px solid #72FF8D; }
+        .nav .nav-main .drop-down-menu ul li:hover {
+          color: #13a386; }
+        .nav .nav-main .drop-down-menu ul li:last-child {
+          border: none; }
+    .nav .nav-main .logo {
+      display: flex;
+      align-items: center;
+      font-size: 1.5rem; }
 
 .header {
   width: 100vw;
-  height: 50vh;
-  background-image: url("../img/food-healthy-morning-cereals.jpg");
+  height: 48vh;
+  background-image: url("../public/img/food-healthy-morning-cereals.jpg");
   background-size: cover;
   background-position: center;
   display: flex;
@@ -114,27 +161,6 @@ a:hover {
     align-items: center;
     justify-content: space-between;
     width: 30%; }
-    .educate .col1 span {
-      width: 4rem;
-      height: 4rem;
-      color: white;
-      font-size: 2rem;
-      background-color: #72FF8D;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      position: relative; }
-      .educate .col1 span:before {
-        content: "";
-        position: absolute;
-        right: 26%;
-        bottom: -2.95rem;
-        width: 0;
-        height: 0;
-        border-top: 32px solid transparent;
-        border-right: 30px solid #72FF8D;
-        border-bottom: 32px solid transparent;
-        transform: rotate(-90deg); }
     .educate .col1 img {
       height: 18rem; }
   .educate .col2 {
@@ -189,17 +215,56 @@ a:hover {
   width: 40vw;
   margin: 0 0 0 1rem; }
 
+.section-category {
+  flex: 1; }
+  .section-category .product-grid {
+    display: flex;
+    width: 70%; }
+  .section-category .category-list {
+    display: flex;
+    flex-direction: column;
+    width: 30%; }
+
+a {
+  width: 25%; }
+  a .product-tile {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: #fff7df;
+    width: 100%;
+    height: 20rem;
+    margin: 1rem;
+    padding: 1rem; }
+    a .product-tile .product-img {
+      display: flex;
+      justify-content: center;
+      align-content: flex-end;
+      width: 95%;
+      height: 12rem;
+      background-color: white;
+      margin: 0.5rem auto; }
+      a .product-tile .product-img img {
+        max-width: 100%;
+        max-height: 100%; }
+
 footer {
   width: 100%;
   background-color: #fff7df;
   margin: 1.5rem 0 0 0;
   display: flex;
-  justify-content: center; }
+  justify-content: center;
+  padding: 1rem 0; }
+  footer div:nth-of-type(2) {
+    border-right: 1px solid #cdcdcd;
+    border-left: 1px solid #cdcdcd; }
   footer ul {
     margin: 0 1rem;
     padding: 1rem;
-    color: darkgray; }
+    color: #4d4d4d; }
     footer ul li {
       font-size: 0.7rem; }
+    footer ul a:hover {
+      color: #cdcdcd; }
 
 /*# sourceMappingURL=index.css.map */
