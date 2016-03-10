@@ -1,6 +1,6 @@
 .nav {
   width: 100vw;
-  height: 6rem;
+  height: 6vh;
   background-color: #fff7df;
   display: flex;
   align-items: center;
@@ -9,49 +9,77 @@
     justify-content: space-between;
     align-items: center;
     color: $color-seafoam;
+  }
+  .nav-main {
+    // border: 1px solid green;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 40%;
+    li {
+      color: $color-seafoam;
+      text-decoration: none;
+      padding: 0.8rem 0.8rem;
+      &:hover {
+        background-color: #f2ffcc;
+        border-radius: 4px 4px 0 0;
+        color: darken($color-seafoam, 20%);
+        &:last-child {
+          background-color: none;
+        }
+        .drop-down-menu ul {
+          position: absolute;
+          display: flex;
+          flex-direction: column;
+        }
+      }
+    }
+    .drop-down-menu ul {
+      display: none;
+      background-color: #f2ffcc;
+      margin: 0 0 0 -0.8rem;
+      li {
+        // margin: 0.15rem 0 0.5rem 0;
+        padding: 0.8rem 1rem 0.8rem 0.8rem;
+        border-bottom: 1px solid #72FF8D;
+        &:hover {
+        color: darken($color-seafoam, 20%);
+        }
+        &:last-child {
+          border: none;
+        }
+      }
+  }
+  .logo {
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+  }
 
+  .search-prim {
+    display: flex;
+    input {
+      @extend %input-reset;
+      padding: 0.3rem;
+      border: none;
+      border-bottom: 1px solid $color-seafoam;
+      width: 14rem;
+      font-size: 1.2rem;
+      color: $color-seafoam;
+      background-color: #fff7df;
+    }
+    .button {
+      @extend %input-reset;
+      margin: 0 0 0 0.3rem;
+      border: none;
+      padding: 0.3rem;
+      color: $color-seafoam;
+      font-size: 1.2rem;
+      background-color: #fff7df;
+      border-radius: 0 4px 4px 0;
+      width: 2rem;
+    }
   }
 }
-.nav-main {
-  // border: 1px solid green;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 40%;
-  a {
-    color: $color-seafoam;
-    text-decoration: none;
-  }
-
-}
-.logo {
-  display: flex;
-  align-items: center;
-  font-size: 1.5rem;
-}
-
-.search-prim {
-  display: flex;
-
-  input {
-    @extend %input-reset;
-    padding: 0.3rem;
-    border: none;
-    border-bottom: 1px solid $color-seafoam;
-    width: 14rem;
-    font-size: 1.2rem;
-    color: $color-seafoam;
-    background-color: #fff7df;
-  };
-  .button {
-    @extend %input-reset;
-    margin: 0 0 0 0.3rem;
-    border: none;
-    padding: 0.3rem;
-    color: $color-seafoam;
-    font-size: 1.2rem;
-    background-color: #fff7df;
-    border-radius: 0 4px 4px 0;
-    width: 2rem;
-  }
 }
