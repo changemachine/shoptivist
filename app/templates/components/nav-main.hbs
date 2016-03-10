@@ -1,18 +1,22 @@
 <nav class="nav">
   <div class="container">
-  <div class="logo">
-    <h1>Shoptivist</h1>
+    <div class="logo">
+      <h1>{{#link-to 'index'}}Shoptivist{{/link-to}}</h1>
+    </div>
+    <ul class="nav-main">
+      {{#each categories as |category|}}
+        <li>{{category.name}}
+          <div class="drop-down-menu">
+            <ul>
+              {{fe-subcategory category=category}}
+            </ul>
+          </div>
+        </li>
+      {{/each}}
+    </ul>
+    <div class="search-prim">
+      <input type="text" name="name" value="">
+      <button class="button"><i class="fa fa-search"></i></button>
+    </div>
   </div>
-
-  <div class="nav-main">
-    {{#each categories as |category|}}
-    {{#link-to 'fe_category' category.id }}{{category.name}}{{/link-to}}
-    {{/each}}
-  </div>
-
-  <div class="search-prim">
-    <input type="text" name="name" value="">
-    <button class="button"><i class="fa fa-search"></i></button>
-  </div>
-</div>
 </nav>
