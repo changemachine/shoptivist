@@ -1,0 +1,3 @@
+{{#each subcategory.products as |product|}}
+<li>{{#link-to 'fe_product' product.id }}{{product.product_name}}{{/link-to}}</li>
+{{/each}}

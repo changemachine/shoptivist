@@ -5,11 +5,9 @@
   </div>
 
   <div class="nav-main">
-    <p class=""><a href="#">Personal</a></p>
-    <p class=""><a href="#">Food</a></p>
-    <p class=""><a href="#">Household</a></p>
-    <p class=""><a href="#">Babies / Kids</a></p>
-    <p class=""><a href="#">Blog</a></p>
+    {{#each categories as |category|}}
+    {{#link-to 'fe_category' category.id }}{{category.name}}{{/link-to}}
+    {{/each}}
   </div>
 
   <div class="search-prim">
@@ -18,24 +16,3 @@
   </div>
 </div>
 </nav>
-
-
-  {{!-- {{#each categories as |cat|}}
-    {{log cat}}
-    <li {{action showCat(cat)}}>{{cat.name}}</li>
-  {{/each}} --}}
-
-
-
-
-
-{{!-- TODO: Do we even WANT crumbs?
-        TEST crumbs
-        STYLE crumbs (app/templates/components/bread-crumbs.hbs)
-        https://github.com/chrisfarber/ember-breadcrumbs
---}}
-{{!-- <div class="crumbs">
-    BREADCRUMBS: {{bread-crumbs}}
-</div> --}}
-
-{{yield}}

@@ -1,0 +1,3 @@
+{{#each category.sub_categories as |subcategory|}}
+  <li>{{#link-to 'fe_subcategory' subcategory.id }}{{subcategory.name}}{{/link-to}}</li>
+{{/each}}
