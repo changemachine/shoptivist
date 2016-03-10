@@ -32,7 +32,14 @@
         {{input value=product_social_score id="product_social_score"}}
       </div>
 
-      <button {{action 'saveProduct' company}}>Save</button>
+      {{#power-select
+        selected=subcat
+        options=model.subcategories
+        onchange=(action (mut subcat)) as |subcategory|}}
+        {{subcategory.name}}
+      {{/power-select}}
+
+      <button {{action 'saveProduct' model.company}}>Save</button>
     </form>
   </div>
  {{else}}

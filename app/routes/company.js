@@ -2,7 +2,10 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
   model(params) {
-    return this.store.findRecord('company', params.company_id);
+    return Ember.RSVP.hash({
+      company: this.store.findRecord('company', params.company_id),
+      subcategories: this.store.findAll('sub_category')
+    });
   },
 
   actions: {
@@ -18,8 +21,17 @@ export default Ember.Route.extend({
 
     saveProduct(company, params) {
       var newProduct = this.store.createRecord('product', params);
+      // return this.store.findRecord('sub_category', params.sub_category).then(function(subCat){
+      //   subCat.get('products').addObject(newProduct);
+      //   newProduct.save();
+      // });
+      params.sub_category.get('products').addObject(newProduct);
+      // newProduct.save().then(function() {
+      //   return params.sub_category.save();
+      // });
       company.get('products').addObject(newProduct);
       newProduct.save().then(function() {
+        params.sub_category.save();
         return company.save();
       });
       this.transitionTo('company', company);
