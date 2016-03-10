@@ -3,35 +3,35 @@
   <form>
     <div class="form-group">
       <label for="name">Name</label>
-      {{input value=company.name id="name"}}
+      {{input value=model.company.name id="name"}}
     </div>
 
     <div class="form-group">
       <label for="health_score">Health Score</label>
-      {{input value=company.health_score id="health_score"}}
+      {{input value=model.company.health_score id="health_score"}}
     </div>
 
     <div class="form-group">
       <label for="environment_score">Environment Score</label>
-      {{input value=company.environment_score id="environment_score"}}
+      {{input value=model.company.environment_score id="environment_score"}}
     </div>
 
     <div class="form-group">
       <label for="humaine_score">Social Score</label>
-      {{input value=company.social_score id="social_score"}}
+      {{input value=model.company.social_score id="social_score"}}
     </div>
 
     <div class="form-group">
       <label for="Parent Company">Parent Company (optional)</label>
-      {{input value=company.parent_company id="parent_company"}}
+      {{input value=model.company.parent_company id="parent_company"}}
     </div>
 
     <button {{action 'updateCompany' company}}>Save</button>
   </form>
 
-  {{#if company.products}}
+  {{#if model.company.products}}
   <h2>Products</h2>
-    {{#each company.products as |product|}}
+    {{#each model.company.products as |product|}}
       <div class="row well">
         <div class="col-md-12">
           {{#link-to 'product' product.id }}{{product.product_name}}{{/link-to}}
@@ -41,5 +41,5 @@
   {{else}}
     <h2>Let's add some Products!</h2>
   {{/if}}
-  {{new-product company=company saveProduct="saveProduct"}}
+  {{new-product model=model saveProduct="saveProduct"}}
 </div>

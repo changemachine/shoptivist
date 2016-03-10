@@ -2,8 +2,10 @@ import Ember from 'ember';
 
 export default Ember.Component.extend({
   addNewSubCategory: false,
+
   actions: {
     subCategoryFormShow() {
+      console.log("lasdfkjsldfkj")
       this.set('addNewSubCategory', true);
       this.set('name', "");
     },
