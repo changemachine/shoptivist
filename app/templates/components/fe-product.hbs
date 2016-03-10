@@ -1,5 +1,17 @@
+<h2>Over All Score {{average_score}}</h2>
+
 <h1>{{product.product_name}}</h1>
 
+<h3>health score {{product.product_health_score}}</h3>
+<h3>environment score {{product.product_environment_score}}</h3>
+<h3>social score {{product.product_social_score}}</h3>
+
 {{#each product.ingredients as |ingredient|}}
-  <li>{{ingredient.ingredient}}</li>
+  <li>
+    {{ingredient.ingredient}}
+    {{ingredient.product_health_score}}
+    {{ingredient.product_environment_score}}
+    {{ingredient.product_social_score}}
+  </li>
 {{/each}}
+<img src="{{product.product_image_url}}" alt="" />
