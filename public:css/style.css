@@ -262,7 +262,8 @@ a {
 .section-product {
   display: flex;
   flex: 1;
-  padding: 2rem 0 0 0; }
+  padding: 2rem 0 0 0;
+  border: 1 px solid red; }
 
 .product-main {
   display: flex;
@@ -278,10 +279,6 @@ a {
   .product-header span {
     font-size: 1.5em; }
 
-.row2 {
-  display: flex;
-  justify-content: flex-start; }
-
 .rating-icon {
   display: flex;
   align-items: center;
@@ -292,11 +289,9 @@ a {
     font-size: 2.2em; }
 
 .product-ratings {
-  flex: 1 1 40%;
   display: flex;
   justify-content: space-between;
-  flex-direction: column;
-  margin: 0 1rem 0 0; }
+  flex-direction: column; }
   .product-ratings div {
     display: flex;
     justify-content: space-between;
@@ -309,37 +304,26 @@ a {
     .product-ratings div h3 {
       color: #34E8C4; }
 
-.ingredients {
-  flex: 1 1 60%; }
-
-.ingredient {
-  background-color: #fff7df;
-  padding: 0.8rem;
-  display: flex;
-  justify-content: space-between;
-  margin: 0.8rem 0; }
-
-.icon {
+.health {
   display: flex;
   flex-direction: column;
-  align-items: center; }
-  .icon i {
-    margin: 0 0.5rem 0 0; }
+  margin: 20px 0 20px 0;
+  width: 40%;
+  height: 80px; }
 
-.health-icon {
+.environment {
   display: flex;
-  justify-content: space-between;
-  margin: 1rem 0; }
+  flex-direction: column;
+  margin: 20px 0 20px 0;
+  width: 40%;
+  height: 80px; }
 
-.environment-icon {
+.society {
   display: flex;
-  justify-content: space-between;
-  margin: 1rem 0; }
-
-.society-icon {
-  display: flex;
-  justify-content: space-between;
-  margin: 1rem 0; }
+  flex-direction: column;
+  margin: 20px 0 20px 0;
+  width: 40%;
+  height: 80px; }
 
 .product-aside {
   display: flex;
@@ -353,14 +337,11 @@ a {
   .image-section img {
     height: 300px; }
 
+.info-tile p {
+  margin: 1.5rem 0 0 0; }
 .info-tile h3 {
   font-size: 1.8em;
   border-bottom: 2px solid #34E8C4; }
-
-.score {
-  display: flex;
-  justify-content: space-between;
-  margin: 0.5rem 0; }
 
 footer {
   width: 100%;
@@ -381,4 +362,4 @@ footer {
     footer ul a:hover {
       color: #cdcdcd; }
 
-/*# sourceMappingURL=index.css.map */
+/*# sourceMappingURL=style.css.map */

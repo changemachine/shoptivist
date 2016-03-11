@@ -261,7 +261,7 @@ a {
 
 .section-product {
   display: flex;
-  justify-content: space-around;
+  flex: 1;
   padding: 2rem 0 0 0; }
 
 .product-main {
@@ -278,6 +278,10 @@ a {
   .product-header span {
     font-size: 1.5em; }
 
+.row2 {
+  display: flex;
+  justify-content: flex-start; }
+
 .rating-icon {
   display: flex;
   align-items: center;
@@ -288,9 +292,11 @@ a {
     font-size: 2.2em; }
 
 .product-ratings {
+  flex: 1 1 40%;
   display: flex;
   justify-content: space-between;
-  flex-direction: column; }
+  flex-direction: column;
+  margin: 0 1rem 0 0; }
   .product-ratings div {
     display: flex;
     justify-content: space-between;
@@ -303,26 +309,37 @@ a {
     .product-ratings div h3 {
       color: #34E8C4; }
 
-.health {
-  display: flex;
-  flex-direction: column;
-  margin: 20px 0 20px 0;
-  width: 40%;
-  height: 80px; }
+.ingredients {
+  flex: 1 1 60%; }
 
-.environment {
+.ingredient {
+  background-color: #fff7df;
+  padding: 0.8rem;
   display: flex;
-  flex-direction: column;
-  margin: 20px 0 20px 0;
-  width: 40%;
-  height: 80px; }
+  justify-content: space-between;
+  margin: 0.8rem 0; }
 
-.society {
+.icon {
   display: flex;
   flex-direction: column;
-  margin: 20px 0 20px 0;
-  width: 40%;
-  height: 80px; }
+  align-items: center; }
+  .icon i {
+    margin: 0 0.5rem 0 0; }
+
+.health-icon {
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem 0; }
+
+.environment-icon {
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem 0; }
+
+.society-icon {
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem 0; }
 
 .product-aside {
   display: flex;
@@ -336,11 +353,14 @@ a {
   .image-section img {
     height: 300px; }
 
-.info-tile p {
-  margin: 1.5rem 0 0 0; }
 .info-tile h3 {
   font-size: 1.8em;
   border-bottom: 2px solid #34E8C4; }
+
+.score {
+  display: flex;
+  justify-content: space-between;
+  margin: 0.5rem 0; }
 
 footer {
   width: 100%;
