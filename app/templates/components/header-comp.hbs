@@ -9,18 +9,15 @@
           searchField="product_name"
           onchange=(action 'goto' value=product.id ) as |product|}}
 
-        {{!-- {{#link-to 'found' product.id}} --}}
           <img src="{{product.product_image_url}}" style="max-height:40px;">
-          {{!-- <strong {{action 'goto' product.id}}>{{product.product_name}}</strong> --}}
           <strong>{{product.product_name}}</strong>
-        {{!-- {{/link-to}} --}}
 
         {{else}}
           <p>{{t "sorry-no-matches-try-again"}}</p>
     {{/power-select}}
 
 
-    <button {{action 'goto'}}><i class="button"></i>Search</button>
+    {{!-- <button {{action 'goto'}}><i class="search-home button"></i>Search</button> --}}
   </div>
   {{!-- {{#if fatSearch}}
   {{input class="fatSearch" placeholder="BIG FAT SEARCH AREA"}}

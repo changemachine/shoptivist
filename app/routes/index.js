@@ -21,7 +21,7 @@ export default Ember.Route.extend({
   actions: {
     goto(id){
       // console.log(id);
-      this.transitionTo('product', id);
+      this.transitionTo('fe_product', id);
     }
   }
 });
