@@ -12,7 +12,7 @@ export default Ember.Route.extend({
       newIngredient.save().then(function() {
         return product.save();
       });
-      this.transitionTo('product', product);
+      this.transitionTo('admin_product', product);
     }
   }
 });

@@ -12,7 +12,7 @@ export default Ember.Route.extend({
       newSubCategory.save().then(function() {
         return category.save();
       });
-      this.transitionTo('category', category);
+      this.transitionTo('admin_category', category);
     }
   }
 });

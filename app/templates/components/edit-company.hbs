@@ -30,11 +30,12 @@
   </form>
 
   {{#if model.company.products}}
+  {{log "are we here"}}
   <h2>Products</h2>
     {{#each model.company.products as |product|}}
       <div class="row well">
         <div class="col-md-12">
-          {{#link-to 'product' product.id }}{{product.product_name}}{{/link-to}}
+          {{#link-to 'admin_product' product.id }}{{product.product_name}}{{/link-to}}
         </div>
       </div>
     {{/each}}
