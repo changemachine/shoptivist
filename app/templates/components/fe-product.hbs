@@ -7,11 +7,22 @@
       <div class="info-tile">
         <div class="col1">
         <h3>About the Brand</h3>
-        <h4>{{product.company.name}} Score</h4>
-
-        <div class="company score">
-          <p class="name">Overall Company Score</p>
-          <span class="rating-5-7">6.6</span>
+        <div class="score">
+          <h4>Made By</h4>
+          <h5>{{product.company.name}}</h5>
+          <h4>Company Score</h4>
+          <div class="company-score">
+            <p class="name">Overall Company Score <span class="rating-5-7">{{company_score}}</span></p>
+          </div>
+          <div class="environ-score">
+            <p class="name">Environment<span class="rating-5-7">{{product.company.environment_score}}</span></p>
+          </div>
+          <div class="environ-score">
+            <p class="name">health<span class="rating-5-7">{{product.company.health_score}}</span></p>
+          </div>
+          <div class="society-score">
+            <p class="name">Society<span class="rating-5-7">{{product.company.social_score}}</span></p>
+          </div>
         </div>
 
         <div class="environ score">

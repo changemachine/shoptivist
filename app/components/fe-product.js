@@ -23,4 +23,5 @@ export default Ember.Component.extend({
   //   return Math.round(((health + environment + social)/3) * 10) /10;
   // }),
 
+
 });
