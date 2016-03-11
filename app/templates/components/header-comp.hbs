@@ -1,7 +1,23 @@
 <header class="header container">
   <div class="search-home container">
-    <input class="input" placeholder="Look up anything..." type="text" name="name" value="">
-      <button class="button"><i class="fa fa-search"></i> Search</button>
+
+    {{#power-select
+          searchPlaceholder="Find a product"
+          class="input"
+          options=products
+          selected=product.id
+          searchField="product_name"
+          onchange=(action 'goto' value=product.id ) as |product|}}
+
+          <img src="{{product.product_image_url}}" style="max-height:40px;">
+          <strong>{{product.product_name}}</strong>
+
+        {{else}}
+          <p>{{t "sorry-no-matches-try-again"}}</p>
+    {{/power-select}}
+
+
+    {{!-- <button {{action 'goto'}}><i class="search-home button"></i>Search</button> --}}
   </div>
   {{!-- {{#if fatSearch}}
   {{input class="fatSearch" placeholder="BIG FAT SEARCH AREA"}}

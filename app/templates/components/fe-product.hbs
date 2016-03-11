@@ -5,6 +5,12 @@
 <h3>health score {{product.product_health_score}}</h3>
 <h3>environment score {{product.product_environment_score}}</h3>
 <h3>social score {{product.product_social_score}}</h3>
+<h3>{{product.company.name}}</h3>
+{{#if product.company.parent_company}}
+  <h3>{{product.company.parent_company}}</h3>
+{{else}}
+  <h3>This is the big daddy</h3>
+{{/if}}
 
 {{#each product.ingredients as |ingredient|}}
   <li>

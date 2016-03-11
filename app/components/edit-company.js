@@ -1,6 +1,9 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
+  /* PASSED FROM COMPANY ROUTE:
+  model (company & sub_categories), updateCompany() & saveProduct()*/
+   
   actions: {
     updateCompany(company) {
       var params = {
