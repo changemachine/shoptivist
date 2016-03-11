@@ -7,7 +7,7 @@
 
     </div>
     <div class="rating-icon">
-      <span>{{average_score}}</span>
+      <span>{{product_avg}}</span>
       <div class="rating">
       <p>Product Rating</p>
       <h3>Good!</h3>
@@ -48,29 +48,38 @@
         <div class="score">
           <h4>Made By</h4>
           <h5>{{product.company.name}}</h5>
+
           <h4>Company Score</h4>
           <div class="company-score">
-            <p class="name">Overall Company Score <span class="rating-5-7">6.6</span></p>
+            <p class="name">Overall Company Score <span class="rating-5-7">{{company_avg}}</span></p>
+          </div>
+          <div class="health-score">
+            <p class="name">Health<span class="rating-5-7">{{product.company.health_score}}</span></p>
           </div>
           <div class="environ-score">
-            <p class="name">Environment<span class="rating-5-7">6.6</span></p>
+            <p class="name">Environment<span class="rating-5-7">{{product.company.environment_score}}</span></p>
           </div>
           <div class="society-score">
-            <p class="name">Society<span class="rating-5-7">6.6</span></p>
+            <p class="name">Society<span class="rating-5-7">{{product.company.social_score}}</span></p>
           </div>
         </div>
     </div>
+
+    <div class="info-tile">
+
+    </div>
+
 
     <div class="info-tile">
       <h3>Corporate Info</h3>
       <h4>Parent Company</h4>
       {{#if product.company.parent_company}}
         <h3>{{product.company.parent_company}}</h3>
-
       {{else}}
         <h3>N/A</h3>
       {{/if}}
     </div>
+
     <div class="info-tile">
       <h3>Ingredients</h3>
       {{#each product.ingredients as |ingredient|}}
