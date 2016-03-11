@@ -2,7 +2,7 @@
 <section class="section-product container">
    <div class="product-aside">
       <div class="image-section">
-        <img src="http://www.naturevalley.com/wp-content/uploads/2014/09/prod-granola-hero.png" alt="">
+        <img src={{product.product_image_url}} alt="">
       </div>
       <div class="info-tile">
         <div class="col1">
@@ -76,33 +76,36 @@
          <span>{{product.product_social_score}}</span>
        </div>
      </div>
+
      <div class="ingredients">
        <h2>Ingredients</h2>
        <div class="ingredient">
        {{#each product.ingredients as |ingredient|}}
+       {{log ingredient}}
          <li class="ingredient">
            <div class="ingredient">
+             <!-- <span>Sugah!</span> -->
              <span>{{ingredient.ingredient}}</span>
-             <span>Quantity<span> Type</span></span>
+             <!-- <span>Quantity<span> Type</span></span> -->
            </div>
          </li>
        {{/each}}
        </div>
-
      </div>
+
    </div>
      </div>
 
 </section>
 
-{{!-- <div class="info-tile">
-<h3>Ingredients</h3>
-{{#each product.ingredients as |ingredient|}}
-<li class="ingredient">
-{{ingredient.ingredient}}
-{{ingredient.product_health_score}}
-{{ingredient.product_environment_score}}
-{{ingredient.product_social_score}}
-</li>
-{{/each}}
-</div> --}}
+<!-- <div class="info-tile">
+  <h3>Ingredients</h3>
+  {{#each product.ingredients as |ingredient|}}
+  <li class="ingredient">
+    {{ingredient.ingredient}}
+    {{ingredient.product_health_score}}
+    {{ingredient.product_environment_score}}
+    {{ingredient.product_social_score}}
+  </li>
+  {{/each}}
+</div> -->
