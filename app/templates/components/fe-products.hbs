@@ -1,3 +1,16 @@
-{{#each subcategory.products as |product|}}
-<li>{{#link-to 'fe_product' product.id }}{{product.product_name}}{{/link-to}}</li>
-{{/each}}
+<section class="section-category container">
+  <div class="category-col-left">
+    <h2><span>Sub Category:</span> "{{subcategory.name}}"</h2>
+    <div class="product-grid">
+      {{#each subcategory.products as |product|}}
+        {{#link-to 'fe_product' product.id}}
+          <div class="product-tile">
+            <h3>{{product.product_name}}</h3>
+            {{log "are we in fe products screen"}}
+            {{fe-product-tile product=product}}
+          </div>
+        {{/link-to}}
+      {{/each}}
+    </div>
+  </div>
+</section>
