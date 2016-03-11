@@ -135,13 +135,17 @@ a:hover, button:hover {
   display: flex;
   height: 50px;
   margin: 0 auto 10vh auto; }
-  .search-home input {
+  .search-home .input {
+    height: 100% !important;
     flex: 1 1 85%;
     padding: 0 0 0 1rem;
     border: none;
     border-radius: 4px 0 0 4px;
     font-size: 1.2rem;
     color: #34E8C4; }
+  #ember-power-select-trigger-ember612{
+    height: 50px !important;
+  }
   .search-home .button {
     border: none;
     flex: 1 1 15%;
