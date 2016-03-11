@@ -1,5 +1,9 @@
 
-{{header-comp route=route}}
+{{!-- {{#each model as |p|}}
+  {{log "->" p.product_name}}
+{{/each}} --}}
+
+{{header-comp products=model route=route goto='goto'}}
 
 <section class="section-home container">
 

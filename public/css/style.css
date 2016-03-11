@@ -135,7 +135,7 @@ a:hover, button:hover {
   display: flex;
   height: 50px;
   margin: 0 auto 10vh auto; }
-  .search-home input {
+  .search-home .input {
     flex: 1 1 85%;
     padding: 0 0 0 1rem;
     border: none;

@@ -7,7 +7,7 @@ const Router = Ember.Router.extend({
 
 Router.map(function() {
   this.route('admin');
-  this.route('company', {path: 'company/:company_id'});
+  this.route('company',   {path: 'company/:company_id'} );
   this.route('subcat');
   this.route('admin_product', {path: 'admin_product/:product_id'});
   this.route('admin_category', {path: 'admin_category/:category_id'});
